@@ -2583,7 +2583,7 @@ function viewLanding() {
     <div class="classcard"><h2>${CONFIG.teacher} · ${CONFIG.className}</h2>
       <div class="q">“千里之行，始于足下”</div><div class="qv">Hành trình ngàn dặm bắt đầu từ một bước chân</div>
       <button class="startbtn" id="start">✨ BẮT ĐẦU</button></div>
-    <div class="intro"><h3>Sơ lược lớp học</h3><div class="introcard">Lớp tiếng Trung <b>${CONFIG.teacher} · ${CONFIG.className}</b> đồng hành cùng bạn chinh phục HSK1 theo giáo trình <span class="zh">《新HSK教程3》</span>. App này giúp bạn ôn từ vựng, ngữ pháp và khẩu ngữ mọi lúc mọi nơi — giáo viên sẽ theo dõi tiến độ ôn tập của bạn qua đây.</div></div>
+    <div class="intro"><h3>Sơ lược lớp học</h3><div class="introcard">Lớp tiếng Trung <b>${CONFIG.teacher} · ${CONFIG.className}</b> đồng hành cùng bạn chinh phục HSK1 theo giáo trình <span class="zh">《新HSK教程1》</span>. App này giúp bạn ôn từ vựng, ngữ pháp và khẩu ngữ mọi lúc mọi nơi — giáo viên sẽ theo dõi tiến độ ôn tập của bạn qua đây.</div></div>
     <div class="tlink">Là giáo viên? <a href="#" id="toT">Vào khu vực giáo viên</a></div>
   </div>`;
   $('#start').onclick = () => showAuth('login');
@@ -3508,7 +3508,7 @@ function viewGrammar() {
   const list = GRAMMAR.map((g, i) => ({ g, i })).filter(x => x.g.l === LESSON);
   main.innerHTML = `<h2 class="sectitle">Ngữ pháp · 语法</h2>
     <h3 class="sectitle" style="font-size:18px">Ngữ pháp bài ${LESSON}</h3>
-    <div class="card" style="text-align:center;margin-bottom:16px"><p style="margin:0 0 12px;color:var(--muted)">Bài ${LESSON} có <b>${list.length} điểm ngữ pháp</b>. Mỗi điểm có phần giải thích, ví dụ và <b>10 câu luyện tập riêng</b>.</p>
+    <div class="card" style="text-align:center;margin-bottom:16px"><p style="margin:0 0 12px;color:var(--muted)">Bài ${LESSON} có <b>${list.length} điểm ngữ pháp</b>. Mỗi điểm có phần giải thích, ví dụ và <b>các câu luyện tập riêng</b>.</p>
       <button class="sysbtn" id="sysBtn">🧭 Xem sơ đồ tổng hợp ${GRAMMAR.length} điểm ngữ pháp HSK1</button></div>
     ${list.map(({ g, i }, k) => `<div class="card gp" id="gp${i}">
       <div class="row"><span class="pill" style="background:${CATS[g.c].c};color:#fff">${CATS[g.c].vi}</span><span class="pill">Điểm ${k + 1}/${list.length}</span></div>
